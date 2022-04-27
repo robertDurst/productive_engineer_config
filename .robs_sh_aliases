@@ -1,0 +1,11 @@
+
+# the basics
+alias c=clear
+
+# Visual Studio Code
+alias del_history="rm -rf .history" # HACK: really should just turn off the extension creating these
+
+# Rails
+alias nuke_db="rm -rf db/schema && RAILS_ENV=test bundle exec rake db:redo && RAILS_ENV=test bundle exec data:migrate"
+alias redo_dm="RAILS_ENV=test STEP=10 bundle exec data:migrate:redo"
+alias parallel_test="bundle exec rake parallel:setup && bundle exec rake parallel_test"
